@@ -1,0 +1,54 @@
+<header>
+    <h2 class="titulo">Muebleria</h2>
+    <nav class="navigation">
+        <a  href="/cargarIndex" >Inicio</a>
+         <a  href="/cargarProductos" >Producto</a>
+        <a  href="/cargarMantenedores" >  Mantenedores</a>     
+        <a  href="/cargarConsulta" >Consultas</a>     
+        <a  href="/cargarReportes" >Reportes</a>
+           </nav>
+    
+  </header>
+    
+    
+    <section class="container">
+        <div class="titulo-consulta"> 
+            <h3 >Consulta Proveedor</h3>
+        </div>
+        
+        <form  method="post" class="form">
+            
+            <input type="text" name="descripcion" id="descripcion" placeholder="buscar por descripcion">
+            <button type="submit">BUSCAR</button>
+        </form>
+
+        <div class="table-wrapper">
+            <table class="content-table"   >
+                <thead>
+                  <tr>
+                    <th>Codigo</th>
+					<th>razon</th>
+					<th>ruc</th>
+			
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let elemento of proveedorArray">
+                        <th scope="row">{{elemento.cod_provee}}</th>
+                        <td>{{elemento.razon}}</td>
+                        <td>{{elemento.ruc}}</td>
+                        
+                        
+                        <td>
+                            <button class="submit-update" (click)="actualizar(elemento.cod_provee)">Editar</button>
+                            <button class="submit-danger" (click)="eliminar(elemento.cod_provee)">Eliminar</button>
+                           
+                        </td>
+                       
+                    </tr>
+					</tbody>
+            </table>
+            <button class="submit" (click)="nuevo()">Nuevo Proveedor</button>
+        </div>
+    </section>

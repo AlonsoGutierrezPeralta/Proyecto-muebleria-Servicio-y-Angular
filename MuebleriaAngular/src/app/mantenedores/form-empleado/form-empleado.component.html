@@ -1,0 +1,46 @@
+<header>
+    <h2 class="titulo">Muebleria</h2>
+    <nav class="navigation">
+        <a  href="/cargarIndex" >Inicio</a>
+         <a  href="/cargarProductos" >Producto</a>
+        <a  href="/cargarMantenedores" >  Mantenedores</a>     
+        <a  href="/cargarConsulta" >Consultas</a>     
+        <a  href="/cargarReportes" >Reportes</a>
+           </nav>
+    
+  </header>
+
+        <form  class="form" [formGroup]="frmEmpleado" (ngSubmit)="guardarEmpleado()">
+            <p class="title">MANTENEDOR DE EMPLEADO </p>  
+                <label >
+                <input placeholder="" type="number" class="input" name="codigo"
+                formControlName="codigo">
+                <span>codigo Empleado</span>
+            </label>
+            <label >
+                <input placeholder="" type="text" class="input" name="nombre"
+                formControlName="nombre">
+                <span>Nombre de Empleado</span>
+            </label>
+               
+            <label >
+                <input placeholder="" type="text" class="input" name="apellido"
+                formControlName="apellido">
+                <span>Apellido de Empleado</span>
+            </label>
+              
+            
+           
+                <label class="input">Puesto   </label>
+                
+                <select id="inputState"  class="form-control" name="puesto" formControlName="puesto">
+                    <option class="option" value="1">Supervisor</option>
+                    <option class="option" value="2">Vendedor</option>
+                    <option class="option" value="3">Almacen</option>
+                    <option class="option" value="4">Despacho</option>
+                    
+                </select>
+        
+            <div class="button-container"><button class="submit">Guardar</button></div>
+            
+        </form>

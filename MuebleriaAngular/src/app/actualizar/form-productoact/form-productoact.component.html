@@ -1,0 +1,58 @@
+<header>
+    <h2 class="titulo">Muebleria</h2>
+    <nav class="navigation">
+        <a  href="/cargarIndex" >Inicio</a>
+        <a  href="/cargarMantenedores" >  Mantenedores</a>     
+        <a  href="/cargarConsulta" >Consultas</a>     
+        <a  href="/cargarReportes" >Reportes</a>
+           </nav>
+    
+  </header>
+
+        <form  class="form" [formGroup]="frmProducto" (ngSubmit)="guardarProducto()">
+            <p class="title">MANTENEDOR DE PRODUCTOS </p>  
+                <label >
+                <input placeholder="" type="number" class="input" name="cod_prov"
+                formControlName="cod_prod">
+                <span>codigo Producto</span>
+            </label>
+
+
+            <span>codigo Proveedor</span>
+            <select id="inputState"  class="form-control" name="cod_provee" formControlName="cod_provee">
+                <option *ngFor="let elemento of proveedorArray" class="option" value="{{elemento.cod_provee}}">{{elemento.razon}}</option>
+              
+                
+            </select>
+            <label >
+                <input placeholder="" type="text" class="input" name="descripcion"
+                formControlName="descripcion">
+                <span>Descripcion</span>
+            </label>
+               
+            <span>Tipo de mueble</span>
+            <select id="inputState"  class="form-control" name="idtipo" formControlName="idtipo">
+                <option class="option" value="1">Juego Dormitorio</option>
+                <option class="option" value="2">Juego Sala</option>
+                <option class="option" value="3">Juego Comedor</option>
+                <option class="option" value="4"> Juego Dormitorio Niños</option>
+                <option class="option" value="4"> Juego Aire Libre</option>
+                
+            </select>
+            <label >
+                <input placeholder="" type="number" class="input" name="stocl"
+                formControlName="stock">
+                <span>Stock</span>
+            </label>
+            <label >
+                <input placeholder="" type="number" class="input" name="precio"
+                formControlName="precio">
+                <span>Precio</span>
+            </label>
+           
+            
+           
+               
+            <div class="button-container"><button class="submit">Guardar</button></div>
+            
+        </form>

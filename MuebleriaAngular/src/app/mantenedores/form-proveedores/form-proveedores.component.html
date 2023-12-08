@@ -1,0 +1,40 @@
+<header>
+    <h2 class="titulo">Muebleria</h2>
+    <nav class="navigation">
+        <a  href="/cargarIndex" >Inicio</a>
+         <a  href="/cargarProductos" >Producto</a>
+        <a  href="/cargarMantenedores" >  Mantenedores</a>     
+        <a  href="/cargarConsulta" >Consultas</a>     
+        <a  href="/cargarReportes" >Reportes</a>
+           </nav>
+    
+  </header>
+
+        <form  class="form" [formGroup]="frmProveedor" (ngSubmit)="guardarProveedor()">
+            <p class="title">MANTENEDOR DE PRODUCTOS </p>  
+                <label >
+                <input placeholder="" type="number" class="input" name="cod_prov"
+                formControlName="cod_provee">
+                <span>codigo Producto</span>
+            </label>
+
+
+          
+            <label >
+                <input placeholder="" type="text" class="input" name="razon"
+                formControlName="razon">
+                <span>Descripcion</span>
+            </label>
+            <label >
+                <input placeholder="" type="text" class="input" name="ruc"
+                formControlName="ruc">
+                <span>Descripcion</span>
+            </label>
+           
+           
+            
+           
+               
+            <div class="button-container"><button class="submit">Guardar</button></div>
+            
+        </form>

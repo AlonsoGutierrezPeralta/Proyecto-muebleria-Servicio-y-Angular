@@ -1,0 +1,54 @@
+<header>
+    <h2 class="titulo">Muebleria</h2>
+    <nav class="navigation">
+        <a  href="/cargarIndex" >Inicio</a>
+         <a  href="/cargarProductos" >Producto</a>
+        <a  href="/cargarMantenedores" >  Mantenedores</a>     
+        <a  href="/cargarConsulta" >Consultas</a>     
+        <a  href="/cargarReportes" >Reportes</a>
+           </nav>
+    
+  </header>
+    
+    
+    <section class="container">
+        <div class="titulo-consulta"> 
+            <h3 >Consulta Empleado</h3>
+        </div>
+        
+        <form  method="post" class="form">
+            
+            <input type="text" name="descripcion" id="descripcion" placeholder="buscar por descripcion">
+            <button type="submit">BUSCAR</button>
+        </form>
+
+        <div class="table-wrapper">
+            <table class="content-table"   >
+                <thead>
+                  <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Puesto</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let elemento of empleadoArray">
+                        <th scope="row">{{elemento.codigo}}</th>
+                        <td>{{elemento.nombre}}</td>
+                        <td>{{elemento.apellido}}</td>
+                        <td>{{elemento.puesto}}</td>
+                        
+                        <td>
+                            <button class="submit-update" (click)="actualizar(elemento.codigo)">Editar</button>
+                            <button class="submit-danger" (click)="eliminar(elemento.codigo)">Eliminar</button>
+                           
+                        </td>
+                       
+                    </tr>
+					</tbody>
+            </table>
+            <button class="submit" (click)="nuevo()">Nuevo Empleado</button>
+        </div>
+    </section>

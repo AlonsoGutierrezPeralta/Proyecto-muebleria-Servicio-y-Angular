@@ -1,0 +1,30 @@
+{
+    "/productos/*":{
+        "target":"http://localhost:8080",
+        "secure":false,
+        "changeOrigin": true,
+        "loglevel": "debug",
+        "pathReWrite": {"^/productos": "http://localhost:8080/productos"}
+    }, 
+    "/empleados/*":{
+        "target":"http://localhost:8080",
+        "secure":false,
+        "changeOrigin": true,
+        "loglevel": "debug",
+        "pathReWrite": {"^/empleados": "http://localhost:8080/empleados"}
+    },
+    "/proveedores/*":{
+        "target":"http://localhost:8080",
+        "secure":false,
+        "changeOrigin": true,
+        "loglevel": "debug",
+        "pathReWrite": {"^/proveedores": "http://localhost:8080/proveedores"}
+    },
+    "/usuarios/*":{
+        "target":"http://localhost:8080",
+        "secure":false,
+        "changeOrigin": true,
+        "loglevel": "debug",
+        "pathReWrite": {"^/usuarios": "http://localhost:8080/usuarios"}
+    }
+    }
