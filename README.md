@@ -17,6 +17,8 @@ El proyecto consiste en:
 - Gestión de muebles (crear, listar, actualizar y eliminar).
 - Validaciones básicas de datos.
 - Comunicación frontend-backend mediante API REST.
+- Operaciones transaccionales para registro de ventas y actualización de stock.
+
 
 ## Estructura del repositorio
 - `MobiliariaSpring-1/` - Backend (Spring Boot)
